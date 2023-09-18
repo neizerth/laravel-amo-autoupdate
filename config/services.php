@@ -35,6 +35,12 @@ return [
         'leads' => [
             'prime_cost_id' => env('AMOCRM_LEAD_PRIME_COST_ID'),
             'profit_id' => env('AMORCM_LEAD_PROFIT_ID')
+        ],
+        'client' => [
+            'client_id', env('AMOCRM_CLIENT_ID'),
+            'client_secret' => env('AMOCRM_CLIENT_SECRET'),
+            'redirect_uri' => env('AMOCRM_REDIRECT_URI'),
+            'code' => env('AMOCRM_CODE')
         ]
     ],
 ];

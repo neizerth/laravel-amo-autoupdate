@@ -31,20 +31,21 @@ class Update implements ShouldQueue
     {
         $config = config('services.amocrm.leads');
         $data = $this->data;
+        $id = $data['id'];
 
-        $lead = Lead::query()->where('amocrm_id', $data['id'])->first();
-
-        $price = $data['price'] ?? 0;
-
-        $profit = $this->getCustomField($data, $config['profit_id']);
-
-        $primeCost = $this->getCustomField($data, $config['prime_cost_id']);
-
-        Log::info(json_encode([
-            'price' => $price,
-            'profit' => $profit,
-            'primeCost' => $primeCost
-        ]));
+//        $lead = Lead::query()->where('amocrm_id', $data['id'])->first();
+//
+//        $price = $data['price'] ?? 0;
+//
+//        $profit = $this->getCustomField($data, $config['profit_id']);
+//
+//        $primeCost = $this->getCustomField($data, $config['prime_cost_id']);
+//
+//        Log::info(json_encode([
+//            'price' => $price,
+//            'profit' => $profit,
+//            'primeCost' => $primeCost
+//        ]));
 
     }
 
